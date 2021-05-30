@@ -3,6 +3,7 @@ import IteratorPattern.*;
 import ProxyPattern.*;
 import StatePattern.*;
 import TemplateMethodPattern.*;
+import AdapterPattern.*;
 
 public class Main {
 
@@ -11,7 +12,8 @@ public class Main {
         // runStatePatternExample();
         // runTemplateMethodPatternExample();
         // runIteratorPatternExample();
-        runCommandPatternExample();
+        // runCommandPatternExample();
+        runAdapterPatternExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -80,5 +82,13 @@ public class Main {
         remoteController.clickUndo();
         remoteController.clickUndo();
         remoteController.clickTurnOffCommand();
+    }
+
+    public static void runAdapterPatternExample(){
+        BritishCharger britishCharger = new BritishCharger();
+        TurkishCharger turkishCharger = new TurkishCharger();
+
+        IBritishAdapter britishAdapter = new BritishAdapter(turkishCharger);
+        britishAdapter.charge();
     }
 }
