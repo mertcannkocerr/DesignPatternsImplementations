@@ -4,6 +4,7 @@ import ProxyPattern.*;
 import StatePattern.*;
 import TemplateMethodPattern.*;
 import AdapterPattern.*;
+import FacadePattern.*;
 
 public class Main {
 
@@ -13,7 +14,8 @@ public class Main {
         // runTemplateMethodPatternExample();
         // runIteratorPatternExample();
         // runCommandPatternExample();
-        runAdapterPatternExample();
+        // runAdapterPatternExample();
+           runFacadePatternExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -90,5 +92,10 @@ public class Main {
 
         IBritishAdapter britishAdapter = new BritishAdapter(turkishCharger);
         britishAdapter.charge();
+    }
+
+    public static void runFacadePatternExample(){
+        HumanSimulator humanSimulator = new HumanSimulator();
+        humanSimulator.createHumanSimulation();
     }
 }
