@@ -6,7 +6,7 @@ import TemplateMethodPattern.*;
 import AdapterPattern.*;
 import FacadePattern.*;
 import SingletonPattern.*;
-
+import StrategyPattern.*;
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -17,7 +17,8 @@ public class Main {
         // runCommandPatternExample();
         // runAdapterPatternExample();
         // runFacadePatternExample();
-        runSingletonPatternExample();
+        // runSingletonPatternExample();
+        runStrategyPatternExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -105,4 +106,23 @@ public class Main {
         DAO databaseAccessObject = DAO.getInstance();
         System.out.println(databaseAccessObject.getConnectionURL());
     }
+
+    public static void runStrategyPatternExample(){
+        Duck wildDuck = new WildDuck(new FlyRocketBehavior(), new LoudQuackBehavior());
+        Duck cityDuck = new CityDuck(new FlyWithWingsBehavior(), new SilentQuackBehavior());
+        Duck rubberDuck = new RubberDuck(new NoFlyBehavior(), new NoQuackBehavior());
+
+        System.out.println("-------Wild Duck-------");
+        wildDuck.display();
+        wildDuck.fly();
+        wildDuck.quack();
+        System.out.println("-------City Duck-------");
+        cityDuck.display();
+        cityDuck.fly();
+        cityDuck.quack();
+        System.out.println("-------Rubber Duck-------");
+        rubberDuck.display();
+        rubberDuck.fly();
+        rubberDuck.quack();
+    };
 }
