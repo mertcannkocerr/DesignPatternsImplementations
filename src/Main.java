@@ -7,9 +7,12 @@ import AdapterPattern.*;
 import FacadePattern.*;
 import SingletonPattern.*;
 import StrategyPattern.*;
+import ObserverPatternExample.*;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
+        // runStrategyPatternExample();
         // runProxyPatternExample();
         // runStatePatternExample();
         // runTemplateMethodPatternExample();
@@ -18,7 +21,7 @@ public class Main {
         // runAdapterPatternExample();
         // runFacadePatternExample();
         // runSingletonPatternExample();
-        runStrategyPatternExample();
+         runObserverPatternExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -125,4 +128,19 @@ public class Main {
         rubberDuck.fly();
         rubberDuck.quack();
     };
+
+    public static void runObserverPatternExample(){
+        WeatherStation weatherStation = new WeatherStation(36.0f, 23.0f, 1.0f);
+        MobileApp mobileApp = new MobileApp(weatherStation);
+        WebApp webApp = new WebApp(weatherStation);
+        DesktopApp desktopApp = new DesktopApp(weatherStation);
+
+        System.out.println("----Initial Status of Weather Station-----");
+        System.out.println(weatherStation);
+        System.out.println("------------------------------------------\n");
+
+        weatherStation.setHum(24.0f);
+        weatherStation.setTemp(38.0f);
+        weatherStation.setPress(2.0f);
+    }
 }
