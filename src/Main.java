@@ -5,6 +5,7 @@ import StatePattern.*;
 import TemplateMethodPattern.*;
 import AdapterPattern.*;
 import FacadePattern.*;
+import SingletonPattern.*;
 
 public class Main {
 
@@ -15,7 +16,8 @@ public class Main {
         // runIteratorPatternExample();
         // runCommandPatternExample();
         // runAdapterPatternExample();
-           runFacadePatternExample();
+        // runFacadePatternExample();
+        runSingletonPatternExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -97,5 +99,10 @@ public class Main {
     public static void runFacadePatternExample(){
         HumanSimulator humanSimulator = new HumanSimulator();
         humanSimulator.createHumanSimulation();
+    }
+
+    public static void runSingletonPatternExample(){
+        DAO databaseAccessObject = DAO.getInstance();
+        System.out.println(databaseAccessObject.getConnectionURL());
     }
 }
