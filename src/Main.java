@@ -1,4 +1,5 @@
 import CommandPattern.*;
+import FactoryMethodPattern.IFactory;
 import IteratorPattern.*;
 import ProxyPattern.*;
 import StatePattern.*;
@@ -9,6 +10,7 @@ import SingletonPattern.*;
 import StrategyPattern.*;
 import ObserverPatternExample.*;
 import DecoratorPattern.*;
+import FactoryMethodPattern.*;
 
 public class Main {
 
@@ -23,7 +25,8 @@ public class Main {
         // runFacadePatternExample();
         // runSingletonPatternExample();
         // runObserverPatternExample();
-        runDecoratorPatternExample();
+        // runDecoratorPatternExample();
+        runFactoryMethodPatternExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -158,5 +161,14 @@ public class Main {
 
         beverage = new Soy(beverage);
         System.out.println(beverage);
+    }
+
+    public static void runFactoryMethodPatternExample() throws Exception {
+        IFactory phoneFactory = new MobilePhoneFactory();
+        IMobilePhone mobilePhone = phoneFactory.getInstance("Note8");
+        System.out.println(mobilePhone.getModel());
+        System.out.println(mobilePhone.getPrice());
+        System.out.println(mobilePhone.getHeight());
+        System.out.println(mobilePhone.getWidth());
     }
 }
