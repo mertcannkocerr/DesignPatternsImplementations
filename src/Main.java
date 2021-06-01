@@ -8,6 +8,7 @@ import FacadePattern.*;
 import SingletonPattern.*;
 import StrategyPattern.*;
 import ObserverPatternExample.*;
+import DecoratorPattern.*;
 
 public class Main {
 
@@ -21,7 +22,8 @@ public class Main {
         // runAdapterPatternExample();
         // runFacadePatternExample();
         // runSingletonPatternExample();
-         runObserverPatternExample();
+        // runObserverPatternExample();
+        runDecoratorPatternExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -142,5 +144,19 @@ public class Main {
         weatherStation.setHum(24.0f);
         weatherStation.setTemp(38.0f);
         weatherStation.setPress(2.0f);
+    }
+
+    public static void runDecoratorPatternExample(){
+        Beverage beverage = new HouseBlend();
+        System.out.println(beverage);
+
+        beverage = new Soy(beverage);
+        System.out.println(beverage);
+
+        beverage = new Whip(beverage);
+        System.out.println(beverage);
+
+        beverage = new Soy(beverage);
+        System.out.println(beverage);
     }
 }
