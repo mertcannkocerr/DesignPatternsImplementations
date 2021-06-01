@@ -16,4 +16,4 @@ This repository was created as part of the BBM486 Design Patterns course. It con
 - Strategy Pattern
 - Template Method Pattern
 
-A separate package has been created for each pattern. And static functions have been added in the main file that run each one. I hope you found useful information in this repository. :fa-smile-o:
+A separate package has been created for each pattern. And static functions have been added in the main file that run each one. I hope you found useful information in this repository.
