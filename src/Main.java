@@ -11,6 +11,10 @@ import StrategyPattern.*;
 import ObserverPatternExample.*;
 import DecoratorPattern.*;
 import FactoryMethodPattern.*;
+import AbstractFactoryMethod.*;
+
+import javax.crypto.Mac;
+import javax.sound.midi.Soundbank;
 
 public class Main {
 
@@ -26,7 +30,8 @@ public class Main {
         // runSingletonPatternExample();
         // runObserverPatternExample();
         // runDecoratorPatternExample();
-        runFactoryMethodPatternExample();
+        // runFactoryMethodPatternExample();
+         runAbstractFactoryMethodExample();
     }
 
     public static void runTemplateMethodPatternExample(){
@@ -171,4 +176,25 @@ public class Main {
         System.out.println(mobilePhone.getHeight());
         System.out.println(mobilePhone.getWidth());
     }
+
+    public static void runAbstractFactoryMethodExample(){
+        WindowsUiFactory windowsUiFactory = new WindowsUiFactory();
+        IButton windowsButton = windowsUiFactory.getButton("Red", 200, 200);
+        ISlider windowsSlider = windowsUiFactory.getSlider("Green", 200);
+
+        System.out.println("------------------------------------------");
+        System.out.println(windowsButton);
+        System.out.println(windowsSlider);
+
+        System.out.println("------------------------------------------");
+        MacOsUiFactory macOsUiFactory = new MacOsUiFactory();
+        IButton macOsButton = new MacOsUiFactory().getButton("Blue", 300, 300);
+        ISlider macOsSlider = new MacOsUiFactory().getSlider("Yellow", 300);
+        System.out.println(macOsButton);
+        System.out.println(macOsSlider);
+        System.out.println("------------------------------------------");
+
+
+    }
 }
+
