@@ -1,25 +1,25 @@
-package AbstractFactoryMethod;
+package AbstractFactoryPattern;
 
-public class WindowsSlider implements ISlider{
+public class MacOsSlider implements ISlider {
     private String color;
     private float width;
 
-    public WindowsSlider(String color, float width) {
+    public MacOsSlider(String color, float width) {
         this.color = color;
         this.width = width;
     }
 
     public String getColor() {
-        return color;
+        return this.color;
     }
 
     public float getWidth() {
-        return width;
+        return this.width;
     }
 
     @Override
     public String toString() {
-        return "WindowsSlider{" +
+        return "MacOsSlider{" +
                 "color='" + color + '\'' +
                 ", width=" + width +
                 '}';

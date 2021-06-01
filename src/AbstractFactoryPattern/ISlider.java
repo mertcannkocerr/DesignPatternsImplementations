@@ -1,4 +1,4 @@
-package AbstractFactoryMethod;
+package AbstractFactoryPattern;
 
 public interface ISlider {
     String getColor();

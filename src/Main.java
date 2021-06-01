@@ -8,30 +8,15 @@ import AdapterPattern.*;
 import FacadePattern.*;
 import SingletonPattern.*;
 import StrategyPattern.*;
-import ObserverPatternExample.*;
+import ObserverPattern.*;
 import DecoratorPattern.*;
 import FactoryMethodPattern.*;
-import AbstractFactoryMethod.*;
-
-import javax.crypto.Mac;
-import javax.sound.midi.Soundbank;
+import AbstractFactoryPattern.*;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        // runStrategyPatternExample();
-        // runProxyPatternExample();
-        // runStatePatternExample();
-        // runTemplateMethodPatternExample();
-        // runIteratorPatternExample();
-        // runCommandPatternExample();
-        // runAdapterPatternExample();
-        // runFacadePatternExample();
-        // runSingletonPatternExample();
-        // runObserverPatternExample();
-        // runDecoratorPatternExample();
-        // runFactoryMethodPatternExample();
-         runAbstractFactoryMethodExample();
+        /* Run Static Example functions to see outputs*/
     }
 
     public static void runTemplateMethodPatternExample(){

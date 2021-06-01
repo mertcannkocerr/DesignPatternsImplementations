@@ -1,4 +1,4 @@
-package ObserverPatternExample;
+package ObserverPattern;
 
 public interface IObserver {
     void update();

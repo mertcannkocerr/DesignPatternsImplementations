@@ -1,4 +1,4 @@
-package ObserverPatternExample;
+package ObserverPattern;
 
 public class WebApp implements IObserver{
     private IObservable observable;

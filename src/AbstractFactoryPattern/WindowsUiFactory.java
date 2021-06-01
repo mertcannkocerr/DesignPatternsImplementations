@@ -1,4 +1,4 @@
-package AbstractFactoryMethod;
+package AbstractFactoryPattern;
 
 public class WindowsUiFactory implements IUiFactory {
 

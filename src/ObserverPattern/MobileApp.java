@@ -1,4 +1,4 @@
-package ObserverPatternExample;
+package ObserverPattern;
 
 public class MobileApp implements IObserver{
     private IObservable observable;

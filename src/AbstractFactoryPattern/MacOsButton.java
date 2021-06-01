@@ -1,4 +1,4 @@
-package AbstractFactoryMethod;
+package AbstractFactoryPattern;
 
 public class MacOsButton implements IButton{
     private float width;
