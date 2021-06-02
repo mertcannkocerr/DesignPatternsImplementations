@@ -5,7 +5,6 @@ public class DAO {
     private String connectionURL = "https://www.google.com";
 
     private DAO() {
-        this.databaseAccessObject = databaseAccessObject;
     }
 
     public static DAO getInstance(){
