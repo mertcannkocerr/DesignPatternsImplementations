@@ -9,6 +9,7 @@ This repository was created as part of the BBM486 Design Patterns course. It con
 - Facade Pattern
 - Factory Method Pattern
 - Iterator Pattern
+- Mediator Pattern
 - Observer Pattern
 - Proxy Pattern
 - Singleton Pattern
