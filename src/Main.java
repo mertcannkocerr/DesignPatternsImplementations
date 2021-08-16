@@ -1,6 +1,10 @@
 import CommandPattern.*;
 import FactoryMethodPattern.IFactory;
 import IteratorPattern.*;
+import MediatorPattern.ChatRoom;
+import MediatorPattern.ChatUser;
+import MediatorPattern.IMediator;
+import MediatorPattern.IUser;
 import ProxyPattern.*;
 import StatePattern.*;
 import TemplateMethodPattern.*;
@@ -17,6 +21,27 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         /* Run Static Example functions to see outputs*/
+
+    }
+    public static void runMediatorPatternExample(){
+        // Creating a mediator that regularizes object communication,
+        // Since we may have more than one mediator object we open object as Interface.
+        // In our case mediator object is Chatroom.
+        IMediator chatroom = new ChatRoom("Chatroom1");
+
+
+        // Creating ChatUsers which are inherited from IUser Object.
+        IUser Alice = new ChatUser("Alice", chatroom);
+        IUser Bob = new ChatUser("Bob", chatroom);
+        IUser Charlie = new ChatUser("Charlie", chatroom);
+
+        Alice.getChatRoom().getAvailableUsers();
+        System.out.println(); // For pretty looking
+
+        // Then calling sendMessage method of these ChatUser objects.
+        Alice.sendMessage("Bob", "Hi Bob, I'm Alice." );
+        System.out.println(); // For pretty looking
+        Alice.sendMessage("Charlie", "Hi Charlie, I'm Alice" );
     }
 
     public static void runTemplateMethodPatternExample(){
